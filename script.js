@@ -83,10 +83,8 @@ const fetchProduct = () => {
 };
 
 window.onload = function onload() {
-
   if (typeof Storage !== 'undefined') {
     // ação
   }
-
   fetchProduct();
 };
