@@ -83,7 +83,7 @@ const fetchProduct = () => {
 };
 
 setTimeout(() => { // loading com timeOut
-  document.body.removeChild(document.querySelector('.p'));
+  document.body.removeChild(document.querySelector('.loading'));
 }, 2000);
 
 window.onload = function onload() {
