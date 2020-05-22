@@ -82,8 +82,8 @@ const fetchProduct = () => {
     .then(data => getData(data.results));
 };
 
-setTimeout(() => {// loading com timeOut
-  document.body.removeChild(document.querySelector('.p'))
+setTimeout(() => { // loading com timeOut
+  document.body.removeChild(document.querySelector('.p'));
 }, 2000);
 
 window.onload = function onload() {
