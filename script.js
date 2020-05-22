@@ -92,8 +92,8 @@ window.onload = function onload() {
   const btnClearCart = document.querySelector('#empty-cart');
   btnClearCart.addEventListener('click', () => {
     const cadaItem = document.querySelector('ol.cart__items');
-    while (cadaItem.firstChild){
-     cadaItem.removeChild(cadaItem.firstChild);
+    while (cadaItem.firstChild) {
+      cadaItem.removeChild(cadaItem.firstChild);
     }
   });
 };
