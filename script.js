@@ -48,8 +48,8 @@ function addToCartObj(obj) {
 
 function createCustomElement(element, className, innerText, id = null) {
   const e = document.createElement(element);
-  if (element === 'button'){ 
-    e.addEventListener('click', () => { 
+  if (element === 'button') {
+    e.addEventListener('click', () => {
       addToCart(id);
     });
   }
