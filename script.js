@@ -1,3 +1,24 @@
+const totalPrice = async () => { // Soma o total de produtos
+  let total = 0;
+  try {
+    const listItems = await document.querySelectorAll('.cart__items > li');
+    listItems.forEach((item) => {
+      const innerHTML = item.innerHTML.split(' ');
+      // console.log(innerHTML);
+      const price = innerHTML[innerHTML.length - 1].split('');
+      price.splice(0, 1);
+      // console.log(price);
+      const number = Number(price.join(''));
+      total += number;
+    });
+    // console.log(total);
+    document.querySelector('.total-price').innerHTML = total;
+  } catch (error) {
+    console.log(error.message);
+  }
+  return total.toFixed(2);
+};
+
 function createProductImageElement(imageSource) {
   const img = document.createElement('img');
   img.className = 'item__image';
@@ -23,6 +44,7 @@ function cartItemClickListener(event) { // remove um item clicado do carrinho
   const section = document.querySelector('ol.cart__items');
   section.removeChild(event.target);
   moveLocalStorage();
+  totalPrice();
 }
 
 // recebe um objeto produto e converte as keys para (sku, name, salePrice)
@@ -47,7 +69,10 @@ const addToCart = (id) => { // recebe o ID de um produto, insere na API.
   .then(response => response.json())
   .then(data => addToCartObj(data))// convertendo as keys
   .then(obj => createCartItemElement(obj)) // Cria o item que vai para o carrinho
-  .then(item => document.querySelector('ol.cart__items').appendChild(item))// insere o item no carrinho
+  .then((item) => {
+    document.querySelector('ol.cart__items').appendChild(item);// insere o item no carrinho
+    totalPrice();
+  })
   .then(() => moveLocalStorage()); // envia pro localStorage
 };
 
@@ -109,6 +134,7 @@ function clearCart() {
     }
     document.querySelector('.cart__items').innerHTML = '';
     moveLocalStorage();
+    totalPrice();
   });
 }
 
@@ -116,4 +142,5 @@ window.onload = function onload() {
   fetchProduct();
   clearCart();
   if (typeof Storage !== 'undefined') getLocalStorage();
+  totalPrice();
 };
