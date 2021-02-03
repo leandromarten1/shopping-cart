@@ -2,22 +2,9 @@
 
 ## Requisitos do projeto
 
-A seguir, estão listados todos os requisitos do projeto. Leia-os atentamente e siga à risca o que for pedido. Em particular, **atente-se para os nomes de ids que alguns elementos de seu projeto devem possuir**. O não cumprimento de um requisito, total ou parcialmente, impactará em sua avaliação.
+- Revisar o conhecimento acerca de JavaScript, CSS e HTML;
+- Checar o conhecimento acerca de JavaScript assíncrono através do uso da API do mercado livre.
 
-Os requisitos do seu projeto são avaliados automaticamente, sendo utilizada a resolução `1366 x 768` (1366 pixels de largura por 768 pixels de altura). Logo, recomenda-se desenvolver seu projeto usando a mesma resolução, via instalação [deste plugin](https://chrome.google.com/webstore/detail/window-resizer/kkelicaakdanhinjdeammmilcgefonfh?hl=en) do `Chrome` para facilitar a configuração dessa resolução.
-
-Você tem liberdade para adicionar novos comportamentos ao seu projeto, seja na forma de aperfeiçoamentos em requisitos propostos ou novas funcionalidades, **desde que tais comportamentos adicionais não conflitem com os requisitos propostos**. Em outras palavras, você pode fazer mais do que for pedido, mas nunca menos. Contudo, tenha em mente que **nada além do que for pedido nos requisitos será avaliado**. Esta é uma oportunidade de você exercitar sua criatividade e experimentar com os conhecimentos adquiridos.
-
-Nesse projeto vocês farão um **carrinho de compras** totalmente dinâmico! E o melhor: consumindo dados diretamente de uma **API!** Isso mesmo. Da sigla em inglês _Application Programming Interface_, uma API é um ponto de contato na internet com determinado serviço. Através de **requisições HTTP** a essa API é possível interagir com ela da forma como quem a criou planejou. Aqui usaremos a API do Mercado Livre para buscarmos produtos à venda.
-
-O [manual da API do Mercado Livre](https://developers.mercadolivre.com.br/pt_br/itens-e-buscas) contém muitas informações sobre ela. Utilizaremos alguns dos _endpoints_, e a forma de uso está detalhada no primeiro requisito. Este projeto tem como objetivo:
-
-- Revisar seu conhecimento acerca de JavaScript, CSS e HTML;
-- Checar o seu conhecimento acerca de JavaScript assíncrono através do uso da API do mercado livre.
-
-Lembre-se de testar, usando Jest, quaisquer funções que criar para comportar a lógica da sua aplicação. Isso é um treinamento muito importante para o próximo trabalho!
-
-Seu projeto só será avaliado se estiver passando pelos _checks_ do **CodeClimate** e do **TravisCI**.
 
 ### 1. Listagem de produtos
 
